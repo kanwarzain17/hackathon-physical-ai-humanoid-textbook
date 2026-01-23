@@ -9,7 +9,6 @@
       "src": "frontend_book",
       "use": "@vercel/static-build",
       "config": {
-        "buildCommand": "npm run build",
         "distDir": "build"
       }
     }
@@ -20,7 +19,8 @@
       "dest": "backend/api.py"
     },
     {
-      "handle": "filesystem"
+      "src": "/",
+      "dest": "/frontend_book/build/index.html"
     },
     {
       "src": "/(.*)",
