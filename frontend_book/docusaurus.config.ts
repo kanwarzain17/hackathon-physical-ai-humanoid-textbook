@@ -12,7 +12,7 @@ const config: Config = {
   },
 
   // ✅ REQUIRED FOR VERCEL
-  url: 'https://hackathon017-physical-ai-humanoid-textbook-r5gldo8f.vercel.app',
+  url: 'https://hackathon018-physical-ai-humanoid-textbook-c3j3ywopt.vercel.app/',
   baseUrl: '/',
   trailingSlash: false,
 
