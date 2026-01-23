@@ -21,12 +21,10 @@
     {
       "src": "/(.*)",
       "dest": "/frontend_book/build/$1"
-    }
-  ],
-  "rewrites": [
+    },
     {
-      "source": "/",
-      "destination": "/frontend_book/build/index.html"
+      "src": "/",
+      "dest": "/frontend_book/build/index.html"
     }
   ]
 }
