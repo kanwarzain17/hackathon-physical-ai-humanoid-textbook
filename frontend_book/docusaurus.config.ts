@@ -1,28 +1,22 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
   title: 'Physical AI & Humanoid Robotics',
   tagline: 'Connect AI intelligence to humanoid robot control',
   favicon: 'img/favicon.ico',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  // ✅ REQUIRED FOR VERCEL
+  url: 'https://hackathon017-physical-ai-humanoid-textbook-r5gldo8f.vercel.app',
   baseUrl: '/',
+  trailingSlash: false,
 
-  // GitHub pages deployment config
-  organizationName: 'anthropics', // Usually your GitHub org/user name
-  projectName: 'humanoid-robotics-course', // Usually your repo name
-
-  // ✅ Updated to warn instead of throw
+  // ✅ Prevent build from failing due to missing docs
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
@@ -36,7 +30,7 @@ const config: Config = {
       'classic',
       {
         docs: {
-          routeBasePath: '/', // Serve the docs at the site's root
+          routeBasePath: '/', // Serve docs at root (/)
           sidebarPath: './sidebars.ts',
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
@@ -51,9 +45,11 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
+
     colorMode: {
       respectPrefersColorScheme: true,
     },
+
     navbar: {
       title: 'Humanoid Robotics',
       hideOnScroll: true,
@@ -71,6 +67,7 @@ const config: Config = {
         },
       ],
     },
+
     footer: {
       style: 'dark',
       links: [
@@ -96,8 +93,9 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Physical AI Course. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Physical AI Course.`,
     },
+
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
