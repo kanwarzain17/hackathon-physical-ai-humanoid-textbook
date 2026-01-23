@@ -8,14 +8,12 @@
     {
       "src": "frontend-book/package.json",
       "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
+      "config": { "distDir": "build" }
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
+      "src": "/api/?(.*)",
       "dest": "backend/api.py"
     },
     {
