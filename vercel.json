@@ -6,7 +6,7 @@
       "use": "@vercel/python"
     },
     {
-      "src": "frontend_book/package.json",
+      "src": "frontend_book",
       "use": "@vercel/static-build",
       "config": {
         "buildCommand": "npm run build",
